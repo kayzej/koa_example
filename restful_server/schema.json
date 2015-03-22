@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema#",
+  "name": "option",
+  "type": "object",
+  "properties": 
+{
+  "key" : 
+  {
+    "type": "object",
+    "required" : true,
+    "properties" : 
+    {
+      "ticker" :      {"type": "string", "required": true},
+      "put_or_call": {"type": "string","required": true},
+      "strike" :     {"type": "number","minimum": 0,"required": true},
+      "expiry" : 
+      {
+        "type" : "object",
+        "required": true,
+        "properties" : 
+        {
+          "y" : {"type": "number", "minimum": 0,"required": true },
+          "m" : {"type": "number", "minimum": 0,"required": true },
+          "d" : {"type": "number", "minimum": 0,"required": true }
+        }
+      }
+    }
+  },
+
+  "value" :
+  {
+    "type" : "object",
+    "required" : true,
+    "properties" : 
+    {
+      "chicago_exchange_id" :  { "type": "string" },
+      "price" :                 { "type": "string",  "required": true  },
+      "change" :               { "type": "string" },
+      "bid" :                  { "type": "string" },
+      "ask" :                  { "type": "string"},
+      "open int" :             { "type": "string"},
+      "volume" :               { "type": "string" }
+    }
+  }
+}
