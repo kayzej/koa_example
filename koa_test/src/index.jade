@@ -1,7 +1,16 @@
 html(lang="en")
 	head
-		script(type='text/javascript', src='http://code.jquery.com/jquery-1.11.0.min.js')
+		include includes/includes
 	body
-		script(type='text/javascript', src='js/app.js')
 		h1 Well Hello there
-		button.btn(id="myButton") Get Me!
+		button.btn(id="listbtn") Get Me!
+		br
+		br
+		form(id='testform')
+			.form-group
+				label(for='InputName1') Name
+				input#InputName1.form-control(type='text', placeholder='Name')
+			.form-group
+				label(for='InputEmail1') Email address
+				input#InputEmail1.form-control(type='email', placeholder='Enter email')
+		button.btn.btn-default(id='form-submit' type='Submit') Submit
