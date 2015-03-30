@@ -26,10 +26,10 @@ var App = {
 		// 	// }, "json");
 		// });
 
-		$('#test-form').submit(function(event){
-			event.preventDefault();
-			console.log('form submitted');
-		});
+		// $('#testform').submit(function(event){
+		// 	//event.preventDefault();
+		// 	console.log('form submitted');
+		// });
 	}
 }
 

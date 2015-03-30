@@ -6,11 +6,11 @@ html(lang="en")
 		button.btn(id="listbtn") Get Me!
 		br
 		br
-		form(id='testform')
+		form(action='/insert' method='post')
 			.form-group
 				label(for='InputName1') Name
-				input#InputName1.form-control(type='text', placeholder='Name')
+				input#InputName1.form-control(name='name' type='text', placeholder='Name')
 			.form-group
 				label(for='InputEmail1') Email address
-				input#InputEmail1.form-control(type='email', placeholder='Enter email')
-		button.btn.btn-default(id='form-submit' type='Submit') Submit
+				input#InputEmail1.form-control(name='email' type='email', placeholder='Enter email')
+				button.btn.btn-default(id='form-submit' type='Submit' ) Submit

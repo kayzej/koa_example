@@ -21,7 +21,7 @@ app.use(jade.middleware({
 app.use(serve( __dirname + '/src'));
 
 app.use(route.get('/list', list));
-app.use(route.post('/data', insert));
+app.use(route.post('/insert', insert));
 
 app.use(route.get('/', function *(next){
 	yield this.render('index');
@@ -36,8 +36,8 @@ function *list(){
 function *insert(){
 	var something = yield parse(this);
 	console.log(something);
-	var res = yield data.insert(something);
-	this.body = 'success';
+	//var res = yield data.insert(something);
+	this.redirect('/');
 }
 
 if(!module.parent) app.listen(3000);
